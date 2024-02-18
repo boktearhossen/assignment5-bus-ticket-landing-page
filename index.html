@@ -9,12 +9,73 @@
     <!-- tailwind css and daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+     <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/9a386eaef5.js" crossorigin="anonymous"></script>
+
+  <style>
+    .font-manrope {
+    font-family: 'Manrope', sans-serif;
+  }
+  </style>
 
 </head>
-<body>
+<body class="font-manrope">
     
 
 
+  <!-- header start here =================================-->
+  <header class="max-w-6xl mx-auto">
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul class="  dropdown-content mt-2  px-4 py-2  w-52 bg-red-200 z-10">
+            <li><a class="red font-normal text-base">Home</a></li>
+            <li><a class="black-2 font-normal text-base">About</a></li>
+            <li><a class="black-2 font-normal text-base">Destination</a></li>
+            <li><a class="black-2 font-normal text-base">Search</a></li>
+          </ul>
+        </div>
+        <a class="cursor-pointer font-extrabold text-2xl black">P-Ticket</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+            <li><a class="red font-normal text-base">Home</a></li>
+            <li><a class="black-2 font-normal text-base">About</a></li>
+            <li><a class="black-2 font-normal text-base">Destination</a></li>
+            <li><a class="black-2 font-normal text-base">Search</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a class="py-3 px-6 font-bold text-base rounded bg-green-200 text-green-700 flex items-center justify-center cursor-pointer">Bus <span class="ml-2"> <img src="./images/bus-icon.png" alt=""> </span>  </a>
+      </div>
+    </div>
+  </header>
+  <!-- header end here ===================================-->
+
+<!-- banner section start here============================== -->
+  <section class="max-w-6xl mx-auto">
+    <div class="hero min-h-screen" style="background-image: url(./images/banner.png);">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-xl">
+            <h1 class="mb-5 text-5xl font-bold">End-to-End Tavel With <br> <span class="text-green-600 "> P-Paribahan</span></h1>
+            <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+            <button class="py-3 cursor-pointer px-6 font-bold text-base rounded bg-green-600">Bye Ticket</button>
+          </div>
+        </div>
+      </div>
+  </section>
+<!-- banner section end  here ============================== -->
 
 
 

@@ -1,85 +1,732 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bus-Ticket-Landing-Page</title>
-    <!-- css link -->
-    <link rel="stylesheet" href="style.css">
-    <!-- tailwind css and daisy ui -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-     <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bus-Ticket-Landing-Page</title>
+  <!-- css link -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- tailwind css and daisy ui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/9a386eaef5.js" crossorigin="anonymous"></script>
 
-  <style>
-    .font-manrope {
-    font-family: 'Manrope', sans-serif;
-  }
-  </style>
+
+<!-- default style -->
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+}
+.raleway-font {
+  font-family: "Raleway", sans-serif;
+}
+.inter-font {
+  font-family: "Inter", sans-serif;
+}
+.color-prime {
+  color: #1dd100;
+}
+.bg-prime {
+  background-color: #1dd100;
+}
+.border-fill {
+  border: 1px solid;
+  border-color: #1dd10066;
+}
+.color-second {
+  color: #1dd1001a;
+}
+.banner-bg {
+  background: linear-gradient(
+      180deg,
+      rgba(3, 7, 18, 0.5),
+      rgba(3, 7, 18, 0) 100%
+    ),
+    url("images/banner.png");
+}
+</style>
+
 
 </head>
-<body class="font-manrope">
-    
+<body class="w-full mx-auto lg:container px-4 lg:px-0">
 
 
   <!-- header start here =================================-->
-  <header class="max-w-6xl mx-auto">
-    <div class="navbar bg-base-100">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
+  <header class="my-5">
+    <nav class="raleway-font">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
           </div>
-          <ul class="  dropdown-content mt-2  px-4 py-2  w-52 bg-red-200 z-10">
-            <li><a class="red font-normal text-base">Home</a></li>
-            <li><a class="black-2 font-normal text-base">About</a></li>
-            <li><a class="black-2 font-normal text-base">Destination</a></li>
-            <li><a class="black-2 font-normal text-base">Search</a></li>
+          <a class=" text-2xl font-extrabold">P-Ticket</a>
+        </div>
+        <div class="navbar-center hidden lg:flex font-medium">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
           </ul>
         </div>
-        <a class="cursor-pointer font-extrabold text-2xl black">P-Ticket</a>
+        <div class="navbar-end">
+          <a
+            class="btn px-6 py-3 border bg-[#1DD1001A] hover:bg-white border-fill flex justify-center items-center m-0">Bus
+            <img src="images/bus-icon.png" alt="bus-icon" /></a>
+        </div>
       </div>
-      <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
-            <li><a class="red font-normal text-base">Home</a></li>
-            <li><a class="black-2 font-normal text-base">About</a></li>
-            <li><a class="black-2 font-normal text-base">Destination</a></li>
-            <li><a class="black-2 font-normal text-base">Search</a></li>
-        </ul>
-      </div>
-      <div class="navbar-end">
-        <a class="py-3 px-6 font-bold text-base rounded bg-green-200 text-green-700 flex items-center justify-center cursor-pointer">Bus <span class="ml-2"> <img src="./images/bus-icon.png" alt=""> </span>  </a>
-      </div>
-    </div>
+    </nav>
   </header>
   <!-- header end here ===================================-->
 
-<!-- banner section start here============================== -->
-  <section class="max-w-6xl mx-auto">
-    <div class="hero min-h-screen" style="background-image: url(./images/banner.png);">
-        <div class="hero-overlay bg-opacity-60"></div>
-        <div class="hero-content text-center text-neutral-content">
-          <div class="max-w-xl">
-            <h1 class="mb-5 text-5xl font-bold">End-to-End Tavel With <br> <span class="text-green-600 "> P-Paribahan</span></h1>
-            <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-            <button class="py-3 cursor-pointer px-6 font-bold text-base rounded bg-green-600">Bye Ticket</button>
+
+
+
+  <!-- banner section start here ================================-->
+  <section class="banner-bg bg-cover bg-no-repeat bg-center border rounded-3xl lg:px-48 py-16  w-full relative">
+    <!-- banner-content -->
+    <div class="text-center space-y-4">
+      <h1 class="raleway-font text-white text-2xl lg:text-6xl font-extrabold">
+        End-to-End Travel with <br /><span class="color-prime">P Paribahan</span>
+      </h1>
+      <p class="inter-font text-lg font-normal text-white text-center">
+        Yes, you can run unit tests and view the results directly within the
+        app. The <br />
+        integrated testing features allow for a streamlined .
+      </p>
+      <button class="raleway-font font-bold text-black bg-prime p-3 border-none rounded-lg ">
+        Buy Ticket
+      </button>
+    </div>
+    <div class="hidden  md:flex  relative left-0 right-0 top-28 justify-center items-center gap-6">
+      <!-- card1-->
+      <div class="flex justify-center items-center bg-white border-b-4 border-[#1DD100] rounded-3xl px-4 py-3 w-80">
+        <div>
+          <img src="images/people.png" />
+        </div>
+        <div>
+          <h1 class="raleway-font font-bold text-3xl">500K+</h1>
+          <p class="inter-font font-normal">Registered users</p>
+        </div>
+      </div>
+      <!-- card2 -->
+      <div class="flex justify-center items-center bg-white border-b-4 border-[#1DD100] rounded-3xl px-4 py-3 w-80">
+        <div>
+          <img src="images/ticket-cupon.png" />
+        </div>
+        <div>
+          <h1 class="raleway-font font-bold text-3xl">1.7 lacks</h1>
+          <p class="inter-font font-normal">Tickets sold</p>
+        </div>
+      </div>
+      <!-- card-3 -->
+      <div class="flex justify-center items-center bg-white border-b-4 border-[#1DD100] rounded-3xl px-4 py-3 w-80">
+        <div>
+          <img src="images/stoppage.png" />
+        </div>
+        <div>
+          <h1 class="raleway-font font-bold text-3xl">80K+</h1>
+          <p class="inter-font font-normal">Rental partners</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- banner section start here =================================-->
+
+
+
+  <!-- coupon section start here ===================================-->
+  <section class="mt-20">
+    <h1 class="raleway-font font-bold text-4xl text-black text-center mb-12"> Best offers for you</h1>
+    <div class="flex flex-col lg:flex lg:flex-row justify-center items-center w-full gap-8 mb-16">
+      <!-- coupon-card-1-->
+      <div class="bg-[#FFBF0F] border-none rounded-3xl w-full flex justify-around items-center">
+        <div class="inter-font">
+          <h1 class="text-4xl font-extrabold text-black">15% OFF</h1>
+          <p class="text-xl text-black">on your next purchase</p>
+          <p class="text-base">use by January 2024</p>
+        </div>
+        <img src="images/cupon-devider.png" alt="" />
+        <div class="raleway-font">
+          <h1 class="text-3xl font-bold">NEW15</h1>
+          <p class="text-base">Coupon Code</p>
+        </div>
+      </div>
+      <!-- coupon-card-2-->
+      <div class="bg-[#F78C9C] border-none rounded-3xl w-full flex justify-around items-center">
+        <div class="inter-font">
+          <h1 class="text-4xl font-extrabold text-black">20% OFF</h1>
+          <p class="text-xl text-black">on your next purchase</p>
+          <p class="text-base">use by January 2024</p>
+        </div>
+        <img src="images/cupon-devider.png" alt="" />
+        <div class="raleway-font">
+          <h1 class="text-3xl font-bold">Couple 20</h1>
+          <p class="text-base">Coupon Code</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mb-5 lg:mb-0">
+      <button class="border-fill rounded-xl color-prime text-xl font-bold raleway-font lg:px-8 py-5"> See All Offers</button>
+    </div>
+  </section>
+  <!-- coupon section end here ====================================-->
+
+
+<!-- ticket section start here ======================================-->
+<section id="buyTicket" class="bg-[#F7F8F8] border-t-2 border-[#1dd100] rounded-t-[88px] px-2 lg:px-28 lg:py-20">
+<div class="text-center">
+  <h1 class="raleway-font font-bold text-2xlf lg:text-4xl text-black mb-6">P.H Paribahan </h1>
+  <p class="inter-font text-base lg:text-lg font-normal"> Yes, you can run unit tests and view the results directly within the app. The integrated <br /> testing features allow for a streamlined .</p>
+</div>
+
+<!-- ticket-top-area ----------------->
+<div class="lg:flex items-center bg-white rounded-3xl mt-12">
+  <div class="lg:flex-1 p-2 lg:p-8">
+    <div class="flex items-center justify-between mb-9">
+      <div class="flex justify-center items-center gap-4">
+        <img src="images/bus-logo.png" alt="" />
+        <div>
+          <h1>Greenline Paribahan</h1>
+          <p>Coach-009-WEB ! AC_Business</p>
+        </div>
+      </div>
+      <div
+        class="bg-[#1DD10026] p-2 border-none rounded-lg flex justify-center items-center gap-2"
+      >
+        <img src="images/seat-green.png" alt="" />
+        <h1><span id="available-seat">40</span> Seats left</h1>
+      </div>
+    </div>
+
+    <div class="bg-[#F7F8F8] p-6 rounded-3xl">
+      <div
+        class="flex justify-between items-center border-dashed border-b-2"
+      >
+        <h1 class="p-3">Route</h1>
+        <h2 class="p-3">Dhaka - Sylhet</h2>
+      </div>
+      <div
+        class="flex justify-between items-center border-dashed border-b-2"
+      >
+        <h1 class="p-3">Departure Time</h1>
+        <h2 class="p-3">9:00 PM</h2>
+      </div>
+      <div class="flex justify-between items-center mt-3">
+        <div class="bg-[#0307120D] px-4 py-2 rounded-xl">
+          <h1>Boarding Point - Laxmipur</h1>
+        </div>
+        <div class="bg-[#0307120D] px-6 py-2 rounded-xl">
+          <h1>Dropping Point - Bogura</h1>
+        </div>
+        <div class="bg-[#0307120D] px-6 py-2 rounded-xl">
+          <h1>Est. Time - 11 Hour</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img class=" hidden lg:block" src="images/info-devider.png" alt="" />
+  <div class="flex flex-col justify-center items-center p-8">
+    <img src="images/fare.png" alt="" />
+    <h1 class="raleway-font text-2xl font-semibold">550 Taka</h1>
+    <p>Per Seat</p>
+  </div>
+</div>
+
+
+<!-- ticket-bottom-area ---------------------->
+<div class="bg-white rounded-3xl p-2 lg:p-6 mt-5 lg:flex justify-between">
+  <!-- ticket-left -->
+  <div class="lg:w-4/6 w-full">
+    <div class="border-dashed border-b-2">
+      <h1 class="py-3">Select Your Seat</h1>
+    </div>
+    <div class="border-dashed border-b-2  flex justify-between items-center">
+      <div class="flex items-center gap-2 py-3">
+        <img src="images/seat-gray.png" alt="" />
+        <h1 class="font-medium text-lg inter-font text-gray-300"> Available </h1>
+      </div>
+      <div class="flex items-center py-3 gap-2">
+        <img src="images/seat-green-filled.png" alt="" />
+        <h1 class="color-prime font-medium text-lg inter-font"> selected</h1>
+      </div>
+    </div>
+
+    <!-- seat-serial-area -->
+    <section id="seat-serial-section" class="">
+      <!-- driver -->
+      <div class="flex justify-end my-5">
+        <button disabled class="btn w-28">
+          <img src="images/drive.svg" alt="" />
+        </button>
+      </div>
+      <!-- serial-a -->
+      <div class="flex w-full mb-5">
+        <div class="flex justify-center items-center">
+          <h1 class="items-center p-4">A</h1>
+        </div>
+        <div class="flex justify-between gap-12 items-center flex-1">
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="A1" class="btn w-full hover:bg-[#1dd100]">
+                A1
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="A2" class="btn w-full hover:bg-[#1dd100]">
+                A2
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="A3" class="btn w-full hover:bg-[#1dd100]">
+                A3
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="A4" class="btn w-full hover:bg-[#1dd100]">
+                A4
+              </button>
+            </div>
           </div>
         </div>
       </div>
+      <!-- serial-b -->
+      <div class="flex w-full mb-5">
+        <div class="flex justify-center items-center">
+          <h1 class="items-center p-4">B</h1>
+        </div>
+        <div class="flex justify-between gap-12 items-center flex-1">
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="B1" class="btn w-full hover:bg-[#1dd100]">
+                B1
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="B2" class="btn w-full hover:bg-[#1dd100]">
+                B2
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="B3" class="btn w-full hover:bg-[#1dd100]">
+                B3
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="B4" class="btn w-full hover:bg-[#1dd100]">
+                B4
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- serial-c -->
+      <div class="flex w-full mb-5">
+        <div class="flex justify-center items-center">
+          <h1 class="items-center p-4">C</h1>
+        </div>
+        <div class="flex justify-between gap-12 items-center flex-1">
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="C1" class="btn w-full hover:bg-[#1dd100]">
+                C1
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="C2" class="btn w-full hover:bg-[#1dd100]">
+                C2
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="C3" class="btn w-full hover:bg-[#1dd100]">
+                C3
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="C4" class="btn w-full hover:bg-[#1dd100]">
+                C4
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- serial-d -->
+      <div class="flex w-full mb-5">
+        <div class="flex justify-center items-center">
+          <h1 class="items-center p-4">D</h1>
+        </div>
+        <div class="flex justify-between gap-12 items-center flex-1">
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="D1" class="btn w-full hover:bg-[#1dd100]">
+                D1
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="D2" class="btn w-full hover:bg-[#1dd100]">
+                D2
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="D3" class="btn w-full hover:bg-[#1dd100]">
+                D3
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="D4" class="btn w-full hover:bg-[#1dd100]">
+                D4
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- serial-e -->
+      <div class="flex w-full mb-5">
+        <div class="flex justify-center items-center">
+          <h1 class="items-center p-4">E</h1>
+        </div>
+        <div class="flex justify-between gap-12 items-center flex-1">
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="E1" class="btn w-full hover:bg-[#1dd100]">
+                E1
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="E2" class="btn w-full hover:bg-[#1dd100]">
+                E2
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="E3" class="btn w-full hover:bg-[#1dd100]">
+                E3
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="E4" class="btn w-full hover:bg-[#1dd100]">
+                E4
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- serial-f -->
+      <div class="flex w-full mb-5">
+        <div class="flex justify-center items-center">
+          <h1 class="items-center p-4">F</h1>
+        </div>
+        <div class="flex justify-between gap-12 items-center flex-1">
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="F1" class="btn w-full hover:bg-[#1dd100]">
+                F1
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="F2" class="btn w-full hover:bg-[#1dd100]">
+                F2
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="F3" class="btn w-full hover:bg-[#1dd100]">
+                F3
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="F4" class="btn w-full hover:bg-[#1dd100]">
+                F4
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- serial-g -->
+      <div class="flex w-full mb-5">
+        <div class="flex justify-center items-center">
+          <h1 class="items-center p-4">G</h1>
+        </div>
+        <div class="flex justify-between gap-12 items-center flex-1">
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="G1" class="btn w-full hover:bg-[#1dd100]">
+                G1
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="G2" class="btn w-full hover:bg-[#1dd100]">
+                G2
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="G3" class="btn w-full hover:bg-[#1dd100]">
+                G3
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="G4" class="btn w-full hover:bg-[#1dd100]">
+                G4
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- serial-h -->
+      <div class="flex w-full mb-5">
+        <div class="flex justify-center items-center">
+          <h1 class="items-center p-4">H</h1>
+        </div>
+        <div class="flex justify-between gap-12 items-center flex-1">
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="H1" class="btn w-full hover:bg-[#1dd100]">
+                H1
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="H2" class="btn w-full hover:bg-[#1dd100]">
+                H2
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="H3" class="btn w-full hover:bg-[#1dd100]">
+                H3
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="H4" class="btn w-full hover:bg-[#1dd100]">
+                H4
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- serial-i -->
+      <div class="flex w-full mb-5">
+        <div class="flex justify-center items-center">
+          <h1 class="items-center p-4">I</h1>
+        </div>
+        <div class="flex justify-between gap-12 items-center flex-1">
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="I1" class="btn w-full hover:bg-[#1dd100]">
+                I1
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="I2" class="btn w-full hover:bg-[#1dd100]">
+                I2
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="I3" class="btn w-full hover:bg-[#1dd100]">
+                I3
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="I4" class="btn w-full hover:bg-[#1dd100]">
+                I4
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- serial-j -->
+      <div class="flex w-full mb-5">
+        <div class="flex justify-center items-center">
+          <h1 class="items-center p-4">J</h1>
+        </div>
+        <div class="flex justify-between gap-12 items-center flex-1">
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="J1" class="btn w-full hover:bg-[#1dd100]">
+                J1
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="J2" class="btn w-full hover:bg-[#1dd100]">
+                J2
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex justify-between items-center gap-5">
+            <div class="w-full">
+              <button id="J3" class="btn w-full hover:bg-[#1dd100]">
+                J3
+              </button>
+            </div>
+            <div class="w-full">
+              <button id="J4" class="btn w-full hover:bg-[#1dd100]">
+                J4
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div
+    class="h-auto border border-dashed border-r-2 border-fill mx-4"
+  ></div>
+
+  <!-- ticket-right -->
+  <section class=" w-full lg:w-2/6">
+    <div class="border-dashed border-b-2">
+      <h1 class="py-3">Select Your Seat</h1>
+    </div>
+
+    <!-- price-total-card -->
+    <section class="bg-[#F7F8F8] p-4 mt-5 rounded-xl">
+      <div>
+        <table class="w-full text-left">
+          <thead class="border-dashed border-b-4">
+            <th class="py-1">
+              Seat
+              <span
+                id="seatPurchase"
+                class="bg-[#1DD100] text-white px-1 py-0 border-none rounded-lg"
+                >0</span
+              >
+            </th>
+            <th>Class</th>
+            <th class="text-right">Price</th>
+          </thead>
+          <tbody id="ticketTable" class="border-solid border-b-4">
+            <!-- Handel Dynamically with js -->
+          </tbody>
+        </table>
+        <div class="flex justify-between items-center py-2">
+          <h1 class="inter-font font-medium">Total Price:</h1>
+          <h1 class="inter-font font-medium">
+            BDT <span id="totalPrice">0</span>
+          </h1>
+        </div>
+      </div>
+      <label
+      id="coupon-label"
+        class="input outline-none border-none focus:outline-none focus:border-none flex items-center gap-2 mt-3"
+      >
+        <input
+          id="couponInput"
+          type="text"
+          class="grow outline-none border-none focus:outline-none focus:border-none"
+          placeholder="Have any coupon?"
+        />
+        <button
+          id="couponBtn"
+          class="badge badge-info p-4 rounded-lg bg-[#1DD100] text-white"
+          disabled
+        >
+          Apply
+        </button>
+      </label>
+      <div class="flex justify-between items-center py-5">
+        <h1 class="inter-font font-medium">Grand total:</h1>
+        <h2 class="inter-font font-medium">
+          BDT <span id="grandTotal"></span>
+        </h2>
+      </div>
+    </section>
+    <!-- Input-area -->
+
+    <form action="">
+      <label
+        for="name"
+        class="inter-font font-semibold text-base text-black"
+        >Passenger Name*
+      </label>
+      <input
+        type="text"
+        placeholder="Enter Your Name"
+        class="input w-full border-gray-300 border border-solid focus:outline-none focus:border-none my-2"
+      />
+      <label
+        for="name"
+        class="inter-font font-semibold text-base text-black"
+        >Phone Number*
+      </label>
+      <input
+        id="PhoneNum"
+        type="text"
+        placeholder="Enter your Phone Number"
+        class="input w-full border-gray-300 border border-solid focus:outline-none focus:border-none my-2"
+      />
+      <label
+        for="name"
+        class="inter-font font-semibold text-base text-black"
+        >Email Id*
+      </label>
+      <input
+        type="text"
+        placeholder="Enter your Email ID"
+        class="input w-full border-gray-300 border border-solid focus:outline-none focus:border-none mt-2"
+      />
+      <button
+        onclick="formSubmit(event)"
+        class="w-full bg-prime p-3 border-none rounded-lg raleway-font font-bold text-white my-6"
+      >
+        Next
+      </button>
+    </form>
+
+    <!-- term & condition -->
+    <div class="flex justify-around items-center">
+      <h2 class="underline"><a href="">Term and Conditions</a></h2>
+      <h2 class="underline"><a href="">Cancellation Policy</a></h2>
+    </div>
   </section>
-<!-- banner section end  here ============================== -->
+</div>
 
 
 
-<!-- js -->
-<script src="./app.js"> </script>
+</section>
+
+
+
+<!-- ticket section end here ======================================-->
+
+
+
+
+
+
+  <!-- js -->
+  <script src="./app.js"></script>
 </body>
+
 </html>
